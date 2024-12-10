@@ -1,0 +1,134 @@
+println("Hello World")
+
+// Btye
+byte b = 10
+println "Byte: $b"
+println b.class
+
+// Short
+short s = 30000
+println "Short: $s"
+
+// Int
+int i = 100000
+println "Int: $i"
+
+// Long
+long l = 1000000000
+println "Long: $l"
+
+// Float
+float f = 10.5f
+println "Float: $f"
+
+// Double
+double d = 10.5
+println "Double: $d"
+
+// char
+char c = 'A'
+println "Char: $c"
+
+// boolean
+boolean bool = true
+println "Boolean: $bool"
+
+// String
+String str = "Hello World"
+println "String: $str"
+
+// BigInteger
+BigInteger bigInt = new BigInteger("100")
+println "BigInteger: $bigInt"
+
+// BigDecimal
+BigDecimal bigDec = new BigDecimal("100.5")
+println "BigDecimal: $bigDec"
+
+// List
+List<Integer> list = [1, 2, 3, 4, 5]
+println "List: $list"
+
+// Map
+Map<String, String> map = [name: "John", age: 30]
+println "Map: $map"
+
+// Range
+Range range = 1..10
+println "Range: $range"
+
+// Closure
+def sayHello() {
+    println "Hello from Groovy"
+}
+sayHello()
+
+def add(int a, int b) {
+    return a + b
+}
+println add(10, 20)
+
+def greet = { name -> println "Hello $name" }
+greet("John")
+
+def square = { it * it }
+println square(5)
+
+def greetWithDefault = {name = "John" -> println "Hello $name"}
+greetWithDefault()
+greetWithDefault("Doe")
+
+String nullableString = null
+println nullableString?.toUpperCase()
+
+int add1(int a, int b) {
+    return a + b
+}
+println add1(10, 20)
+
+def add3 (a, b) {
+    a*b
+    a+b
+}
+println add3(10, 20)
+
+int add2(int a, int b) {
+    return a + b
+}
+println add2(10, 20)
+
+class Person {
+    String name
+    int age
+
+    Person(String name, int age) {
+        this.name = name
+        this.age = age
+    }
+
+    def getName() {
+        "Name: $name"
+    }
+
+    def display() {
+        println "Name: $name, Age: $age"
+    }
+}
+
+person = new Person("John", 30)
+person.display()
+
+println person.name
+
+for (newI in 1..5) {
+    println newI
+}
+
+def colors = ['Red': '#FF0000', 'Green' : '#00FF00', 'Blue' : '#0000FF']
+for (color in colors) {
+    println color.key + " : " + color.value
+}
+
+colors.each { key, value -> println "$key : $value" }
+
+colors.eachWithIndex { entry, index -> println "$index : $entry.key : $entry.value" }
